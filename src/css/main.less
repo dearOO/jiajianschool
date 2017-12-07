@@ -1,0 +1,35 @@
+@basic-bg:#2b3f71;
+/*此文件夹放公用的样式*/
+
+@body-bg: #363d47;
+@top: 20px;
+@time-color:#747474;
+@font-color:#fff;
+
+* {
+    margin:0;
+    padding:0;
+    border: 0;
+}
+
+body {
+    background-color: @body-bg;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    box-size: border-box;
+}
+
+ul , ol, li{
+    padding: 0;
+    list-style: none;
+}
+
+//清除浮动
+.clear-float {
+    content: '';
+    height: 0;
+    line-height: none;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}

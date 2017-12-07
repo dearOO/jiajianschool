@@ -1,0 +1,236 @@
+@import 'main.less';  //引用样式表
+
+.box{
+    margin:0 auto;
+    width: 100%;
+    max-width: 1200px;
+    /*border: 1px solid saddlebrown;*/
+}
+
+.contant{
+    width: 100%;
+    min-height: 600px;
+    background-color: white;
+    padding-bottom: @top;
+}
+.am-topbar {
+    border: none;
+    margin-bottom: 0;
+    background-color: @body-bg !important;
+    a {
+        color: #fff !important;
+    }
+}
+.am-nav>li>a:focus, .am-nav>li>a:hover {
+    background-color: #2b3f71 !important;
+}
+.am-btn-success:focus, .am-btn-success:hover{
+    background-color: #739bfd !important;
+}
+.am-btn-success {
+    color: #fff;
+    background-color: #739bfd;
+    border-radius:3px;
+    border: none;
+}
+.am-g{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: @top;
+    //border: 1px solid sienna;
+}
+.title{
+    width: 67%;
+    height: 25px;
+    border-bottom-right-radius: 15px;
+    span{
+        color: #fff;
+        margin-left: 8px;
+        font-size: 16px;
+
+    }
+}
+.title1{
+    background-color: #f63217;
+}
+.title2{
+    background-color: #26cd20;
+}
+.title3{
+    background-color: #fec102;
+}
+.title4{
+    background-color: #9928ef;
+}
+.title5{
+    background-color: #3897de;
+}
+.title6{
+    background-color: #bd624a;
+}
+.title7{
+    background-color: #f2ad0f;
+}
+.title8{
+    background-color: #2b3f71;
+}
+.title9,.title10{
+    background-color: #a6e420;
+}
+
+.artical{
+    font-size: 14px;
+    ul{
+        //margin-top: 12px;
+        li{
+            margin: 10px 0;   //这里最好用 margin
+            //max-font-size:24 !important;
+            &::after {
+                .clear-float; //设置了浮动一定要在父元素上清除
+            }
+            .newsTitle{
+                //display: block;
+                float: left;
+                width: 220px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                :hover{
+                    cursor: pointer ;
+                    color: orangered ;
+                }
+                .icon-color{
+                    color: #fd7903;
+                }
+                a{
+                    color: #252525;
+                    padding-left: 8px;
+
+                }
+            }
+            em{
+                float: right;
+                font-size: 12px;
+                color: @time-color;
+            }
+        }
+    }
+}
+
+.am-g {
+    .am-thumbnails {
+        min-height: 200px;
+        margin-right: 0;
+    }
+}
+.am-nav-tabs{
+    li{
+        border:0  ;
+    }
+}
+.am-nav-tabs>li.am-active>a{
+    color:#252525;
+}
+.am-nav-tabs>li>a:focus, .am-nav-tabs>li>a:hover{
+    color: @font-color !important;
+}
+.am-tabs-bd{
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+}
+.newsImg{
+    h6{
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px 8px;
+        margin: 0;
+        display: block;
+        :hover{
+            color: orangered !important;
+            cursor: pointer !important;
+        }
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.articalNews{
+    //margin-right: 20px;
+    li{
+        padding:8px 0 0 !important;
+    }
+}
+video{
+    max-width: 300px;
+    max-height: 240px;
+    width: 170px;
+    height: 150px;
+}
+.am-viewport{
+    margin-top: @top;
+    border: none;
+    .am-slides{
+        li{
+            width: 300px;
+            height: 133px;
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 145px;
+    background-color: @basic-bg;
+    .footContent{
+        width: 60%;
+        margin: 0 auto;
+        //border: 1px solid firebrick;
+    }
+    .powerBy{
+        width: 70%;
+        font-size: 12px;
+        float: left;
+        color: white;
+        // !important;
+        padding-top: 48px;
+        text-align: center;
+        //border: 1px solid rebeccapurple;
+        span{
+            line-height: 30px;
+        }
+    }
+}
+.erweima{
+    height: 80px;
+    padding-top: 38px;
+            img{
+                width: 80px;
+                height:auto;
+                padding: 10px;
+            }
+}
+@media (max-width: 900px){
+    footer{
+        //height: 220px;
+        .footContent{
+            width: 100%;
+            margin: 0 auto;
+            //border: 1px solid firebrick;
+        }
+        .erweima{
+            height: 50px;
+            padding-top: 58px;
+            img{
+                width: 50px;
+                height:auto;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+     .artical>ul>li>em{
+         display: none;
+     }
+}
