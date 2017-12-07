@@ -237,3 +237,15 @@ footer .powerBy span {
     display: none;
   }
 }
+@media (max-width: 1025px) and (min-width: 639px) {
+  .newsImg {
+    width: 40%;
+  }
+  .newsImg h6 {
+    font-size: 14px;
+  }
+  .articalNews {
+    width: 60% !important;
+    font-size: 12px;
+  }
+}
