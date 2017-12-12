@@ -1,3 +1,4 @@
+@top:20px;
 //banner处理
 .banner{width: 100%;height: 500px !important; }
 .Yl-container{width:100%; height:500px !important; overflow:hidden; position:relative;}
@@ -15,10 +16,30 @@
     min-height: 1120px;
     background-color: white;
 }
-.newsTitle{
+.am-g{
+    border: 1px solid;
+}
+.am-container{
+    padding: 0 !important;
+}
+[class*=am-u-]{
+    padding-left: 2rem !important;
+    padding-right: 0;
+}
+@media(max-width:1050px){
+    [class*=am-u-]{
+        padding: 0 !important;
+    }
+}
+.marginTop{
+    margin-top: @top;
+}
+.title{
     width: 100%;
     height: 64px;
-    border: 1px solid;
+    // border: 1px solid;
+}
+.newsTitle{
     background: url('../img/kind_03.png') top right no-repeat;
     padding-top: 10px;
     span{
@@ -28,9 +49,46 @@
             font-weight: 900;
             line-height: 0.75;
             text-align: left;
-            text-shadow: 1px 1.732px 2px rgba( 0, 0, 0,0.8 );
+            text-shadow:1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF, 1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF, 2px 2px 0px rgba(0, 0, 0, 0.5), -2px -2px 0px #fff;  
             padding-top: 10px; 
     }
     // background-size: contain;
 }
-
+.parkTitle{
+    background: url('../img/kind_07.png') top left no-repeat;
+}
+.homeTitle{
+    background: url('../img/kind_10.png') top left no-repeat;
+    span{
+        color: rgb( 31, 173, 130 );
+        position: relative;
+        top:30px;
+        left: 30px;
+    }
+}
+.studentTitle{
+    background: url('../img/kind_19.png') top left no-repeat;
+}
+.foodTitle{
+    background: url('../img/kind_22.png') top left no-repeat;
+    span{
+        color: rgb( 240, 164, 23 );
+        position: relative;
+        top:10px;
+        left: 30px;
+    }
+}
+.spanStyle{
+    span{
+        font-size: 21.336px;
+        font-family: "Tensentype AiQingJ";
+        line-height: 1.406;
+        font-weight: 900;
+        text-align: left;
+        text-shadow:1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF, 1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF, 2px 2px 0px rgba(0, 0, 0, 0.5), -2px -2px 0px #fff;
+        // margin-top: 20px
+        label{
+            font-size: 14px;
+        }
+}
+}
