@@ -10,31 +10,22 @@ body {
   font-size: 14px;
   box-size: border-box;
 }
-ul,
-ol,
-li {
-  padding: 0;
-  list-style: none;
-}
-.clear-float {
-  content: '';
-  height: 0;
-  line-height: none;
-  display: block;
-  visibility: hidden;
-  clear: both;
-}
 .box {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  /*border: 1px solid saddlebrown;*/
 }
 .contant {
   width: 100%;
   min-height: 600px;
   background-color: white;
   padding-bottom: 20px;
+}
+ul,
+ol,
+li {
+  padding: 0;
+  list-style: none;
 }
 .am-topbar {
   border: none;
@@ -46,6 +37,7 @@ li {
 }
 .am-nav > li > a:focus,
 .am-nav > li > a:hover {
+  cursor: pointer !important;
   background-color: #2b3f71 !important;
 }
 .am-btn-success:focus,
@@ -57,6 +49,17 @@ li {
   background-color: #739bfd;
   border-radius: 3px;
   border: none;
+}
+.clear-float {
+  content: '';
+  height: 0;
+  line-height: none;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.floatR {
+  float: right !important;
 }
 .am-g {
   width: 95%;

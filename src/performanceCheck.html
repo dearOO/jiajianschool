@@ -1,10 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="夹江外国语实验学校">
+    <meta name="keywords" content="夹江,外国语,学校">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta name="msapplication-TileImage" content="img/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <title>成绩查询</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/performanceCheck.css">
 </head>
+
 <body>
-$END$
+    <header class="am-topbar">
+        <h1 class="am-topbar-brand">
+            <a href="#"><img src="img/titleSmall.png" alt=""></a>
+        </h1>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"> <span class="am-icon-bars"></span></button>
+        <div class="am-collapse am-topbar-collapse floatR" id="doc-topbar-collapse">
+            <ul class="am-nav am-nav-pills pageMenu am-topbar-nav ">
+                <li><a href="index.html">网站首页</a></li>
+                <li><a>幼 稚 园</a></li>
+                <li><a>小 学 部</a></li>
+                <li><a>初 中 部</a></li>
+                <li><a href="performanceCheck.html">成绩查询</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="scoreBox">
+        <div class="scoreContent">
+            <div class="scoreSearch">
+                <form action="" class="am-form" id="doc-vld-msg">
+                    <fieldset>
+                        <legend>成绩查询</legend>
+                        <div class="am-form-group">
+                            <input type="tel" id="doc-vld-number-2-1" minlength="12" max-length="12" placeholder="输入准考证号" data-validation-message="请输入正确的准考证号" onblur="validate(this)" class="am-form-field" required/>
+                        </div>
+                        <div class="am-form-group">
+                            <input type="tel" id="doc-vld-number-2-1" data-validation-message="输入正确的身份证号" placeholder="输入身份证号" class="am-form-field" required/>
+                        </div>
+                        <div class="am-form-group" id="">
+                            <span id="code" class="am-form-field" style='width:30% !important; float:left;margin-left:10% !important;'>验证码</span>
+                            <input type="text" id="doc-vld-identifying-2-1" data-validation-message="验证码错了哟" placeholder="输入验证码" class=" am-form-field input" style='width:40% !important; float:right; margin-right:10% !important;'>
+                        </div>
+                        <button class="am-btn am-btn-secondary" type="submit" id="check">提交</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="scoreResult">
+                <div class="studentInformation">
+                    <div class=""><span>考生姓名:</span><label id="studentName">张飒</label></div>
+                    <div class="informationBox"><span>准考证号:</span><label id="studentNum">110214288269</label></div>
+                    <div class="informationBox1"><span>身份证号:</span><label id="studentId">511102200712307732</label></div>
+                    <div class="scoreTab">
+                        <table>
+                            <tr>
+                                <th>语&nbsp;文</th>
+                                <th>数&nbsp;学</th>
+                                <th>英&nbsp;语</th>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>118</td>
+                                <td>105</td>
+                            </tr>
+                        </table>
+                        <table class="zonghe">
+                            <tr>
+                                <th>理科综合</th>
+                                <th>物&nbsp;理</th>
+                                <th>化&nbsp;学</th>
+                                <th>生&nbsp;物</th>
+                            </tr>
+                            <tr>
+                                <td>231</td>
+                                <td>99</td>
+                                <td>118</td>
+                                <td>105</td>
+                            </tr>
+                        </table>
+                        <table class="zonghe">
+                            <tr>
+                                <th>文科综合</th>
+                                <th>地&nbsp;理</th>
+                                <th>政&nbsp;治</th>
+                                <th>历&nbsp;史</th>
+                            </tr>
+                            <tr>
+                                <td>314</td>
+                                <td>99</td>
+                                <td>118</td>
+                                <td>105</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="all">
+                        <span>总 分:</span><label id="allS">561</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
+<script type="text/javascript" src="js/less.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/amazeui.min.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+<script>
+    $(function() {
+        $('#doc-vld-msg').validator({
+            onValid: function(validity) {
+                $(validity.field).closest('.am-form-group').find('.am-alert').hide();
+            },
+
+            onInValid: function(validity) {
+                var $field = $(validity.field);
+                var $group = $field.closest('.am-form-group');
+                var $alert = $group.find('.am-alert');
+                // 使用自定义的提示信息 或 插件内置的提示信息
+                var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+
+                if (!$alert.length) {
+                    $alert = $('<div class="am-alert am-alert-danger" style="width:80% !important;margin:0 auto;"></div>').hide().
+                    appendTo($group);
+                }
+
+                $alert.html(msg).show();
+            }
+        });
+    });
+    //身份证验证
+    function IdCardRegCheck(obj) {
+        var str = obj.value;
+        var reg = /^([0-9]{15}|[0-9]{18})$/;
+        var idNumber = reg.test(str);
+        return idNumber;
+        if (idNumber == false) {
+            alert("请输入正确的身份证号！")
+        }
+        // console.log(idNumber);
+
+    }
+    //准考证验证
+    function validate(obj) {
+        var reg = new RegExp("^[0-9]*$");
+        var str = obj.value;
+        if (!reg.test(obj.value)) {
+            alert("请输入数字!");
+        }
+    }
+</script>
+
 </html>

@@ -1,0 +1,116 @@
+
+.am-topbar-brand>a>img{
+    width: 100%;
+}
+.scoreBox{
+    width: 100%;
+    min-height: 500px;
+    background: -webkit-linear-gradient(rgba(88,179,253,0.85), rgba(255,255,255,0.85)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(88,179,253,0.85), rgba(255,255,255,0.85)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(88,179,253,0.85), rgba(255,255,255,0.85)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(88,179,253,0.85), rgba(255,255,255,0.85)); /* 标准的语法 */
+    // border: 1px solid sienna;
+    margin-top: 5px;
+}
+.scoreContent{
+    width: 100%;
+    min-height: 450px;
+    padding-top: 90px;
+    background: url("../img/score1.png") 20px 50px no-repeat;
+    background-size: auto;
+    .scoreSearch{
+        width: 100%;
+        max-width: 345px;
+        min-height: 260px;
+        // margin: 0 auto;
+        position: fixed;  
+        right: 20%;
+        top:27%;      
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #b8b6b6;
+        display: none;
+        .am-form-field{
+            width: 80% !important;
+            margin: 16px auto !important;
+            border-radius: 5px !important;
+            margin:20px;
+
+        }
+    }
+}
+.am-btn-secondary {
+    width:80px !important;
+    margin-left:40% !important;
+    border-radius: 5px !important;
+}
+.scoreResult{
+    width: 100%;
+    max-width: 450px;
+    min-height: 290px;
+    // margin: 0 auto;
+    position: fixed;  
+    right: 15%;
+    top:20%;      
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #b8b6b6;
+    .studentInformation{
+        // border: 1px solid saddlebrown;
+        width: 95%;
+        margin: 15px auto ;
+        font-size:14px;
+        div{
+            label{
+                padding:0 10px;
+                font-weight:normal;                
+            }
+        }
+        .informationBox{
+            width: 45%;
+            float:left;
+            // text-align:center;
+        }.informationBox1{
+            width: 55%;
+            float:left;
+            // text-align:center;
+        }
+        .scoreTab{
+            width:80%;
+            margin:30px auto;
+            // border:1px sol   id #aaaaaa;
+            table{
+                width:100%;
+                max-width: 350px;
+                min-height:50px;
+                margin-bottom:10px; 
+                th,td{
+                    width:33%;
+                    text-align: center;
+                    // height: 3px0;
+                    border: 1px solid #aaa
+                }
+                
+            }
+            .zonghe{
+                th,td{
+                    width:25% !important;
+                    text-align: center;
+                    // height: 3px0;
+                    border: 1px solid #aaa
+                }
+            }
+        }
+    }
+    #allS{
+        font-size: 20px;
+        color:#ff3000;
+    }
+}
+
+@media (max-width:560px){
+    .scoreResult{
+        right: 0%;
+    }
+}
+

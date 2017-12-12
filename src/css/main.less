@@ -1,6 +1,5 @@
-@basic-bg:#2b3f71;
 /*此文件夹放公用的样式*/
-
+@basic-bg:#2b3f71;
 @body-bg: #363d47;
 @top: 20px;
 @time-color:#747474;
@@ -18,11 +17,46 @@ body {
     font-size: 14px;
     box-size: border-box;
 }
+.box{
+    margin:0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
 
+.contant{
+    width: 100%;
+    min-height: 600px;
+    background-color: white;
+    padding-bottom: @top;
+}
 ul , ol, li{
     padding: 0;
     list-style: none;
 }
+
+.am-topbar {
+    border: none;
+    margin-bottom: 0;
+    background-color: @body-bg !important;
+    a {
+        color: #fff !important;
+    }
+    
+}
+.am-nav>li>a:focus, .am-nav>li>a:hover {
+    cursor: pointer !important;
+    background-color: #2b3f71 !important;
+}
+.am-btn-success:focus, .am-btn-success:hover{
+    background-color: #739bfd !important;
+}
+.am-btn-success {
+    color: #fff;
+    background-color: #739bfd;
+    border-radius:3px;
+    border: none;
+}
+
 
 //清除浮动
 .clear-float {
@@ -33,3 +67,7 @@ ul , ol, li{
     visibility: hidden;
     clear: both;
 }
+
+
+//子页menu
+

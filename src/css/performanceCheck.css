@@ -1,0 +1,105 @@
+.am-topbar-brand > a > img {
+  width: 100%;
+}
+.scoreBox {
+  width: 100%;
+  min-height: 500px;
+  background: -webkit-linear-gradient(rgba(88, 179, 253, 0.85), rgba(255, 255, 255, 0.85));
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(rgba(88, 179, 253, 0.85), rgba(255, 255, 255, 0.85));
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(rgba(88, 179, 253, 0.85), rgba(255, 255, 255, 0.85));
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(rgba(88, 179, 253, 0.85), rgba(255, 255, 255, 0.85));
+  /* 标准的语法 */
+  margin-top: 5px;
+}
+.scoreContent {
+  width: 100%;
+  min-height: 450px;
+  padding-top: 90px;
+  background: url("../img/score1.png") 20px 50px no-repeat;
+  background-size: auto;
+}
+.scoreContent .scoreSearch {
+  width: 100%;
+  max-width: 345px;
+  min-height: 260px;
+  position: fixed;
+  right: 20%;
+  top: 27%;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #b8b6b6;
+  display: none;
+}
+.scoreContent .scoreSearch .am-form-field {
+  width: 80% !important;
+  margin: 16px auto !important;
+  border-radius: 5px !important;
+  margin: 20px;
+}
+.am-btn-secondary {
+  width: 80px !important;
+  margin-left: 40% !important;
+  border-radius: 5px !important;
+}
+.scoreResult {
+  width: 100%;
+  max-width: 450px;
+  min-height: 290px;
+  position: fixed;
+  right: 15%;
+  top: 20%;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #b8b6b6;
+}
+.scoreResult .studentInformation {
+  width: 95%;
+  margin: 15px auto ;
+  font-size: 14px;
+}
+.scoreResult .studentInformation div label {
+  padding: 0 10px;
+  font-weight: normal;
+}
+.scoreResult .studentInformation .informationBox {
+  width: 45%;
+  float: left;
+}
+.scoreResult .studentInformation .informationBox1 {
+  width: 55%;
+  float: left;
+}
+.scoreResult .studentInformation .scoreTab {
+  width: 80%;
+  margin: 30px auto;
+}
+.scoreResult .studentInformation .scoreTab table {
+  width: 100%;
+  max-width: 350px;
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+.scoreResult .studentInformation .scoreTab table th,
+.scoreResult .studentInformation .scoreTab table td {
+  width: 33%;
+  text-align: center;
+  border: 1px solid #aaa;
+}
+.scoreResult .studentInformation .scoreTab .zonghe th,
+.scoreResult .studentInformation .scoreTab .zonghe td {
+  width: 25% !important;
+  text-align: center;
+  border: 1px solid #aaa;
+}
+.scoreResult #allS {
+  font-size: 20px;
+  color: #ff3000;
+}
+@media (max-width: 560px) {
+  .scoreResult {
+    right: 0%;
+  }
+}

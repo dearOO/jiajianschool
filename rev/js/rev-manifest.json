@@ -1,8 +1,9 @@
 {
-  "amazeui.min.js": "amazeui-7a2f9d02a5.min.js",
-  "app.js": "app-3cea5a7e44.js",
-  "initNews.js": "initNews-9dc6b918f4.js",
-  "jquery.Yl.Slide.min.js": "jquery-2d5928f30d.Yl.Slide.min.js",
-  "jquery.min.js": "jquery-77e30920ee.min.js",
-  "less.min.js": "less-bd107f5530.min.js"
+  "amazeui.min.js": "amazeui-09f5458bbf.min.js",
+  "app.js": "app-4efefd8d06.js",
+  "code.js": "code-13efd527bc.js",
+  "initNews.js": "initNews-7fccdfa6b5.js",
+  "jquery.Yl.Slide.min.js": "jquery-0b6f7fa63a.Yl.Slide.min.js",
+  "jquery.min.js": "jquery-f18b25fd52.min.js",
+  "less.min.js": "less-7940321870.min.js"
 }

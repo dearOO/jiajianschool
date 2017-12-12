@@ -5,7 +5,7 @@
         schoolNews: [{
             title: '夹江外国语实验学校2016年招生简章',
             date: '2017-11-22',
-            url: 'img/1.jpg'
+            url: 'img/15.jpg'
         }, {
             title: '夹江外国语实验学校2016年招生简章',
             date: '2017-11-22',
@@ -30,7 +30,9 @@
     initpartyBuilding(data.schoolNews);
     initschoolFood(data.schoolNews);
     initparentsSchool(data.schoolNews)
-    initzhaosheng(data.schoolNews)
+    initzhaosheng(data.schoolNews);
+    initteacher(data.schoolNews)
+    initstudent(data.schoolNews)
 })();
 
 //招生招聘
@@ -109,11 +111,51 @@ function initAbuot(data) {
     }
     $('#about').html(dom);
 }
+//教师
+function initteacher(data) {
+    var teacherDom = '';
+    for (var i = 0; i < data.length; i++) {
+        if (i == 0) {
+            teacherDom = teacherDom + ' <div class="newsImg am-u-sm-12 am-u-md-12 am-u-lg-5"><h6>' + data[i].title + '</h6>\
+            <img src="' + data[i].url + '" alt="运动会"></div>\
+            <div class="artical articalNews am-u-sm-12 am-u-md-12 am-u-lg-7">\
+            <ul>'
+
+        } else {
+            teacherDom = teacherDom + '<li><div class="newsTitle"><span>' + data[i].title + '</span></div></li>'
+                // $('#otherNews').html(teacherDom)
+        }
+
+    }
+    teacherDom = teacherDom + '</ul></div>'
+    $('#teacher').html(teacherDom);
+}
+
+
+function initstudent(data) {
+    var studentDom = '';
+    for (var i = 0; i < data.length; i++) {
+        if (i == 0) {
+            studentDom = studentDom + ' <div class="newsImg am-u-sm-12 am-u-md-12 am-u-lg-5"><h6>' + data[i].title + '</h6>\
+            <img src="' + data[i].url + '" alt="运动会"></div>\
+            <div class="artical articalNews am-u-sm-12 am-u-md-12 am-u-lg-7">\
+            <ul>'
+
+        } else {
+            studentDom = studentDom + '<li><div class="newsTitle"><span>' + data[i].title + '</span></div></li>'
+                // $('#otherNews').html(teacherDom)
+        }
+
+    }
+    studentDom = studentDom + '</ul></div>'
+    $('#student').html(studentDom);
+}
 
 
 //学校喜报数据
 (function() {
     /*data 是假数据*/
+
     var imgData = {
         goodNews: [{
             title: '#',
