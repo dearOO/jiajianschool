@@ -1,0 +1,115 @@
+@hoverColor:#bb3206;
+a{
+    color: #929292 !important;
+}
+.pageContent{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    // min-height: 800px;
+    background-color:#f0f0f0;
+    background-image:  url("../img/schoolBg_03.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    .pageBox{
+        width:95%;
+        height: auto;
+        margin:0 auto;
+        // border: 1px solid saddlebrown;
+    }
+}
+.current{
+    color: #929292;
+    padding: 20px 0;
+    
+    // a:hover{
+    //     color:#bb3206 !important;
+    //     cursor: pointer !important;
+    // }
+}
+.am-sticky-placeholder{
+    display: inline-block;
+}
+.am-sticky,.fixedMenu{
+    width: 220px !important;
+    height:260px;
+    background-color: #fff;
+    ul{
+        width: 100%;
+        height: 100%;
+        // border: 1px solid saddlebrown;
+        li{
+            width: 100%;
+            padding: 14px 18px;
+            // border: 1px solid saddlebrown;
+            a{
+                font-size: 14px;
+            }
+            i{
+                color:#929292; 
+                float: right;
+            }
+        }
+        li:hover a,li:hover i{
+            color:@hoverColor !important;
+            cursor: pointer !important;
+        }
+    }
+}
+.page{
+         width: 100%;
+         max-width: 860px;
+         min-height: 380px;    
+         float: right;
+         background-color: #ffffff;    
+         border:1px solid #dfdfdf;
+         border-radius: 2px;
+         h2{
+             font-size: 24px;
+             color: #f39970;
+             font-weight: normal
+         }  
+         .am-list-news{
+             display: none;
+               margin:0 50px;
+         .am-list-news-hd{   
+             border-bottom: 4px double #efefef;
+        }
+        .am-list>li>a{
+            display: inline;
+            padding: 0 !important;
+        }
+        .am-list>li>span{
+            // font-size: 14px;
+            float: right !important;
+            color: #929292;
+        }
+        .am-list>li:hover a,.am-list>li:hover span{
+            color: @hoverColor !important;
+        }
+    } 
+    .am-article-hd{
+        display: table;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .am-article-lead{
+        border: none;
+        text-indent:30px;
+        padding:0 40px 20px;
+        line-height: 30px;
+        background-color: inherit
+    }
+}
+
+// 手机端 分页菜单栏
+@media (max-width:1200px) {
+    .fixedMenu{
+        position: relative !important;
+        // width: 100px !important;
+        // height: 200px;
+        // ul>li{
+        //     display: none !important;
+        // }
+    // }
+}

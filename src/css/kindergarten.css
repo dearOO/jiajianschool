@@ -38,9 +38,6 @@
   min-height: 1120px;
   background-color: white;
 }
-.am-g {
-  border: 1px solid;
-}
 .am-container {
   padding: 0 !important;
 }
@@ -89,6 +86,19 @@
 .studentTitle {
   background: url('../img/kind_19.png') top left no-repeat;
 }
+.studentTitle span {
+  font-size: 24px;
+  font-family: "Tensentype AiQingJ";
+  color: #02902a;
+  font-weight: 900;
+  line-height: 0.75;
+  text-align: left;
+  text-shadow: 1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF, 1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF, 2px 2px 0px rgba(0, 0, 0, 0.5), -2px -2px 0px #fff;
+  padding-top: 10px;
+}
+.studentTitle span label {
+  font-size: 16px;
+}
 .foodTitle {
   background: url('../img/kind_22.png') top left no-repeat;
 }
@@ -108,4 +118,7 @@
 }
 .spanStyle span label {
   font-size: 14px;
+}
+.am-list > li {
+  border: none !important;
 }

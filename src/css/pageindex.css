@@ -1,0 +1,106 @@
+a {
+  color: #929292 !important;
+}
+.pageContent {
+  width: 100%;
+  max-width: 1200px;
+  /* min-height: 800px; */
+  background-color: #f0f0f0;
+  background-image: url("../img/schoolBg_03.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.pageContent .pageBox {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+.current {
+  color: #929292;
+  padding: 20px 0;
+}
+.am-sticky-placeholder {
+  display: inline-block;
+}
+.am-sticky,
+.fixedMenu {
+  width: 220px !important;
+  height: 260px;
+  background-color: #fff;
+}
+.am-sticky ul,
+.fixedMenu ul {
+  width: 100%;
+  height: 100%;
+}
+.am-sticky ul li,
+.fixedMenu ul li {
+  width: 100%;
+  padding: 14px 18px;
+}
+.am-sticky ul li a,
+.fixedMenu ul li a {
+  font-size: 14px;
+}
+.am-sticky ul li i,
+.fixedMenu ul li i {
+  color: #929292;
+  float: right;
+}
+.am-sticky ul li:hover a,
+.fixedMenu ul li:hover a,
+.am-sticky ul li:hover i,
+.fixedMenu ul li:hover i {
+  color: #bb3206 !important;
+  cursor: pointer !important;
+}
+.page {
+  width: 100%;
+  max-width: 860px;
+  min-height: 380px;
+  float: right;
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+}
+.page h2 {
+  font-size: 24px;
+  color: #f39970;
+  font-weight: normal;
+}
+.page .am-list-news {
+  display: none;
+  margin: 0 50px;
+}
+.page .am-list-news .am-list-news-hd {
+  border-bottom: 4px double #efefef;
+}
+.page .am-list-news .am-list > li > a {
+  display: inline;
+  padding: 0 !important;
+}
+.page .am-list-news .am-list > li > span {
+  float: right !important;
+  color: #929292;
+}
+.page .am-list-news .am-list > li:hover a,
+.page .am-list-news .am-list > li:hover span {
+  color: #bb3206 !important;
+}
+.page .am-article-hd {
+  display: table;
+  margin: 10px auto;
+  text-align: center;
+}
+.page .am-article-lead {
+  border: none;
+  text-indent: 30px;
+  padding: 0 40px 20px;
+  line-height: 30px;
+  background-color: inherit;
+}
+@media (max-width: 1200px) {
+  .fixedMenu {
+    position: relative !important;
+  }
+}
