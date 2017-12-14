@@ -4,7 +4,7 @@ a {
 .pageContent {
   width: 100%;
   max-width: 1200px;
-  /* min-height: 800px; */
+  height: auto;
   background-color: #f0f0f0;
   background-image: url("../img/schoolBg_03.png");
   background-repeat: no-repeat;
