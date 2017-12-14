@@ -65,7 +65,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('less', function() {
-    return gulp.src(config.input.css)
+    return gulp.src(config.input.less)
         .pipe(less())
         .pipe(minifyCss())
         .pipe(rev())
@@ -119,11 +119,12 @@ gulp.task('watch', function() {
     gulp.watch(config.input.html, ['html']);
     gulp.watch(config.input.js, ['js']);
     gulp.watch(config.input.css, ['css']);
+    gulp.watch(config.input.css, ['less']);
 })
 
 gulp.task('default', function() {
     /**压缩打包 */
     // gulp.run('img', 'js', 'css', 'rev');
     /**自动刷新 */
-    gulp.run('img', 'js', 'css', 'watch', 'connect');
+    gulp.run('watch', 'connect');
 });
