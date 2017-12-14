@@ -140,21 +140,27 @@
                 </div>
             </footer>
         </div>
+        <i class="am-icon-chevron-circle-right" data-am-offcanvas="{target: '#side-meun', effect: 'push'}"></i>
+        <div id="side-meun" class="am-offcanvas">
+            <div class="am-offcanvas-bar">
+                <div class="am-offcanvas-content">
+                    <div class="fixedMenu" data-am-sticky="{top:80,bottom:500px;}">
+                        <ul>
+                            <li><a href="#">校园快讯</a><i class="am-icon-angle-double-right" aria-hidden="true"></i>
+                            <li><a href="#">教师天地</a><i class="am-icon-angle-double-right" aria-hidden="true"></i>
+                            <li><a href="#">学生风采</a><i class="am-icon-angle-double-right" aria-hidden="true"></i>
+                            <li><a href="#">学校喜报</a><i class="am-icon-angle-double-right" aria-hidden="true"></i>
+                            <li><a href="#">招生招聘</a><i class="am-icon-angle-double-right" aria-hidden="true"></i>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
     </body>
-    <script type="text/javascript" src="js/less.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/amazeui.min.js"></script>
     <!-- <script type="text/javascript" src="js/initNews.js"></script> -->
     <script type="text/javascript" src="js/jquery.Yl.Slide.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script>
-        $(function() {
-            var id = '#my-offcanvas';
-            var $myOc = $(id);
-            $('.doc-oc-js').on('click', function() {
-              $myOc.offCanvas($(this).data('rel'));
-            });
-          });
-        
-    </script>
 </html>

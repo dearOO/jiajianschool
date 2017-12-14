@@ -36,6 +36,7 @@ a{
 
 .pageContent{
     position: relative;
+    padding: 15px;
     width: 100%;
     background-color:#f0f0f0;
     background-image:  url("../img/schoolBg_03.png");
@@ -63,11 +64,12 @@ a{
              color: #f39970;
              font-weight: normal
          }  
-         .am-list-news{
-             display: none;
-               margin:0 50px;
-         .am-list-news-hd{   
-             border-bottom: 4px double #efefef;
+        .am-list-news{
+            display: none;
+            margin:0 50px;
+        }
+        .am-list-news-hd{   
+            border-bottom: 4px double #efefef;
         }
         .am-list>li>a{
             display: inline;
@@ -96,18 +98,27 @@ a{
     }
 }
 
+.am-icon-chevron-circle-right {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 40px;
+    color: #dd514c;
+}
+
 // 手机端 分页菜单栏
 @media screen and (max-width: 768px) {
+    .fixedMenu{
+        // display: none;
+        background-color: transparent;
+        a, i {
+            color: #fff !important;
+        }
+    }
     .pageContent {
-        // .fixedMenu{
-        //     position: relative !important;
-        //     // width: 100px !important;
-        //     // height: 200px;
-        //     // ul>li{
-        //     //     display: none !important;
-        //     // }
-        // // }
-        // }
+        .fixedMenu{
+            display: none;
+        }
         .page {
             width: 100%;
         }
@@ -115,16 +126,10 @@ a{
 }
 
 @media screen and (min-width:769px) {
+    .am-icon-chevron-circle-right {
+        visibility: hidden;
+    }
     .pageContent {
-        // .fixedMenu{
-        //     position: relative !important;
-        //     // width: 100px !important;
-        //     // height: 200px;
-        //     // ul>li{
-        //     //     display: none !important;
-        //     // }
-        // // }
-        // }
         .page {
             width: 75%;
         }
