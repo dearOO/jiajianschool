@@ -28,11 +28,11 @@
         </h1>
         <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"> <span class="am-icon-bars"></span></button>
         <div class="am-collapse am-topbar-collapse floatR" id="doc-topbar-collapse">
-            <ul class="am-nav am-nav-pills pageMenu am-topbar-nav ">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
                 <li><a href="index.html">网站首页</a></li>
                 <li><a href="kindergarten.html">幼 稚 园</a></li>
-                <li><a>小 学 部</a></li>
-                <li><a>初 中 部</a></li>
+                <li><a href="primarySchoolIndex.html">小 学 部</a></li>
+                <li><a href="middleSchoolIndex.html">初 中 部</a></li>
                 <li><a href="performanceCheck.html">成绩查询</a></li>
             </ul>
         </div>
@@ -44,10 +44,10 @@
                     <fieldset>
                         <legend>成绩查询</legend>
                         <div class="am-form-group">
-                            <input type="tel" id="doc-vld-number-2-1" minlength="12" max-length="12" placeholder="输入准考证号" data-validation-message="请输入正确的准考证号" onblur="validate(this)" class="am-form-field" required/>
+                            <input type="tel" id="doc-vld-number-2-1" placeholder="输入准考证号" data-validation-message="请输入正确的准考证号" onblur="validate(this)" class="am-form-field" minlength="4" maxlength="10" required/>
                         </div>
                         <div class="am-form-group">
-                            <input type="tel" id="doc-vld-number-2-1" data-validation-message="输入正确的身份证号" placeholder="输入身份证号" class="am-form-field" required/>
+                            <input type="tel" id="doc-vld-number-2-2" data-validation-message="输入正确的身份证号" placeholder="输入身份证号"  class="am-form-field" minlength="18" maxlength="18" required/>
                         </div>
                         <div class="am-form-group" id="">
                             <span id="code" class="am-form-field" style='width:30% !important; float:left;margin-left:10% !important;'>验证码</span>
@@ -59,23 +59,26 @@
             </div>
             <div class="scoreResult">
                 <div class="studentInformation">
-                    <div class=""><span>考生姓名:</span><label id="studentName">张飒</label></div>
-                    <div class="informationBox"><span>准考证号:</span><label id="studentNum">110214288269</label></div>
-                    <div class="informationBox1"><span>身份证号:</span><label id="studentId">511102200712307732</label></div>
+                    <div class="studentMessage">
+                        <div class="informationBox"><span>考生姓名:</span><label id="studentName">张飒</label></div>
+                        <div class="informationBox1"><span>原读学校:</span><label id="schoolName">一小</label></div>
+                        <div class="informationBox"><span>准考证号:</span><label id="studentNum">110214288269</label></div>
+                        <div class="informationBox1"><span>身份证号:</span><label id="studentId">511102200712307732</label></div>
+                    </div>
                     <div class="scoreTab">
                         <table>
                             <tr>
                                 <th>语&nbsp;文</th>
                                 <th>数&nbsp;学</th>
-                                <th>英&nbsp;语</th>
+                                <th>面试情况</th>
                             </tr>
                             <tr>
-                                <td>99</td>
-                                <td>118</td>
-                                <td>105</td>
+                                <td>92</td>
+                                <td>88</td>
+                                <td>优</td>
                             </tr>
                         </table>
-                        <table class="zonghe">
+                        <!-- <table class="zonghe">
                             <tr>
                                 <th>理科综合</th>
                                 <th>物&nbsp;理</th>
@@ -102,10 +105,10 @@
                                 <td>118</td>
                                 <td>105</td>
                             </tr>
-                        </table>
+                        </table> -->
                     </div>
                     <div class="all">
-                        <span>总 分:</span><label id="allS">561</label>
+                        <span>总 分:</span><label id="allS">180</label>
                     </div>
                 </div>
             </div>
@@ -113,7 +116,7 @@
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/amazeui.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+<!-- <script type="text/javascript" src="js/app.js"></script> -->
 <script type="text/javascript" src="js/code.js"></script>
 <script>
     $(function() {
@@ -137,19 +140,12 @@
                 $alert.html(msg).show();
             }
         });
+//         $('#your-form').validator({
+//   validate: function(validity) {
+//     // 在这里编写你的验证逻辑
+//   }
     });
-    //身份证验证
-    function IdCardRegCheck(obj) {
-        var str = obj.value;
-        var reg = /^([0-9]{15}|[0-9]{18})$/;
-        var idNumber = reg.test(str);
-        return idNumber;
-        if (idNumber == false) {
-            alert("请输入正确的身份证号！")
-        }
-        // console.log(idNumber);
-
-    }
+   
     //准考证验证
     function validate(obj) {
         var reg = new RegExp("^[0-9]*$");
@@ -158,6 +154,18 @@
             alert("请输入数字!");
         }
     }
+     //身份证验证
+    //  function IdCardRegCheck(idC) {
+    //     var str = idC.value;
+    //     var reg = new RegExp("^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$");
+    //     // var idNumber = reg.test(str);
+    //     if (!reg.test(idC.value)) {
+    //         alert("请输入正确的身份证号！");
+    //     }
+    //     else{
+    //         alert("hahah")
+    //     }
+    // }
 </script>
 
 </html>

@@ -65,7 +65,6 @@ a {
   font-weight: normal;
 }
 .pageContent .page .am-list-news {
-  display: none;
   margin: 0 50px;
 }
 .pageContent .page .am-list-news-hd {
@@ -83,6 +82,9 @@ a {
 .pageContent .page .am-list > li:hover span {
   color: #bb3206 !important;
 }
+.pageContent .page .am-article {
+  display: none;
+}
 .pageContent .page .am-article-hd {
   display: table;
   margin: 10px auto;
@@ -94,6 +96,13 @@ a {
   padding: 0 40px 20px;
   line-height: 30px;
   background-color: inherit;
+}
+.pageContent .page .pageFen {
+  float: right;
+  padding: 50px 0;
+}
+.pageContent .page .pageFen .am-pagination > .am-active > a {
+  color: white !important;
 }
 .am-icon-chevron-circle-right {
   position: fixed;

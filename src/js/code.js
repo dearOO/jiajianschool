@@ -7,7 +7,7 @@ $(function() {
         // alert(ranColor)
         var ranColor2 = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
         var num1 = Math.floor(Math.random() * 20+1);
-        var num2 = Math.floor(Math.random() * 30+1);
+        var num2 = Math.floor(Math.random() * 10+1);
         code = num1 + num2;
 
         $("#code").html(num1 + "+" + num2 + "=?");
@@ -31,7 +31,7 @@ $(function() {
         } else if($(".input").val() == '' ){
             alert("请输入验证码")
         }else {
-            alert("算错了哟!");
+            alert("验证码错误!");
         }
     });
 });

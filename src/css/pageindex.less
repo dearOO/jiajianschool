@@ -65,7 +65,7 @@ a{
              font-weight: normal
          }  
         .am-list-news{
-            display: none;
+            // display: none;
             margin:0 50px;
         }
         .am-list-news-hd{   
@@ -83,6 +83,9 @@ a{
         .am-list>li:hover a,.am-list>li:hover span{
             color: @hoverColor !important;
         }
+        .am-article{
+            display: none;
+        }
         .am-article-hd{
             display: table;
             margin: 10px auto;
@@ -94,6 +97,15 @@ a{
             padding:0 40px 20px;
             line-height: 30px;
             background-color: inherit
+        }
+        .pageFen{
+            float: right;
+            padding: 50px 0;
+            .am-pagination>.am-active>a{
+                // background-color: @hoverColor !important;
+                color: white !important;
+               
+            }
         }
     }
 }

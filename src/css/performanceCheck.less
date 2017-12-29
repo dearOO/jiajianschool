@@ -30,6 +30,7 @@
         border-radius: 10px;
         border: 1px solid #b8b6b6;
         display: none;
+        // display: block;
         .am-form-field{
             width: 80% !important;
             margin: 16px auto !important;
@@ -45,6 +46,8 @@
     border-radius: 5px !important;
 }
 .scoreResult{
+    // display: none;
+    display: block;
     width: 100%;
     max-width: 450px;
     min-height: 290px;
@@ -60,32 +63,41 @@
         width: 95%;
         margin: 15px auto ;
         font-size:14px;
-        div{
-            label{
-                padding:0 10px;
-                font-weight:normal;                
+        .studentMessage{
+            width: 100%;
+            min-height: 60px;
+            margin: 0 auto;
+            div{
+                
+                label{
+                    // font-size: 16px;
+                    padding:5px 10px;
+                    font-weight:normal;                
+                }
             }
-        }
-        .informationBox{
-            width: 45%;
-            float:left;
-            // text-align:center;
-        }.informationBox1{
-            width: 55%;
-            float:left;
-            // text-align:center;
-        }
+            .informationBox{
+                width: 45%;
+                float:left;
+                text-align:left;
+            }.informationBox1{
+                width: 55%;
+                float:left;
+                text-align:left;
+            }
+        }  
+       
         .scoreTab{
             width:80%;
-            margin:30px auto;
+            margin:20px auto;
             // border:1px sol   id #aaaaaa;
             table{
+                font-size: 16px;
                 width:100%;
                 max-width: 350px;
                 min-height:50px;
-                margin-bottom:10px; 
+                margin:50px auto; 
                 th,td{
-                    width:33%;
+                    // width:50%;
                     text-align: center;
                     // height: 3px0;
                     border: 1px solid #aaa
@@ -102,8 +114,12 @@
             }
         }
     }
+    .all{
+        float: right;
+    }
     #allS{
         font-size: 20px;
+        padding: 5px;
         color:#ff3000;
     }
 }
